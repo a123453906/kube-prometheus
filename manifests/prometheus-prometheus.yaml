@@ -34,6 +34,17 @@ spec:
   resources:
     requests:
       memory: 400Mi
+  retention: 15d
+  storage:
+    volumeClaimTemplate:
+      metadata:
+        name: prometheus-tsdb-data
+      spec:
+        accessModes: [ "ReadWriteMany" ]
+        storageClassName: managed-nfs-storage
+        resources:
+          requests:
+            storage: 5Gi
   ruleSelector:
     matchLabels:
       prometheus: k8s
