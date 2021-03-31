@@ -23,7 +23,7 @@ metadata:
     k8s-app: etcd
 subsets:
 - addresses:
-  - ip: 192.168.4.201
+  - ip: 192.168.50.10
     nodeName: etcd-master
   ports:
   - name: port
