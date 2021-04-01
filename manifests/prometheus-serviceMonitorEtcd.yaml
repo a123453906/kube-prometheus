@@ -4,7 +4,7 @@ metadata:
   name: etcd-k8s
   namespace: monitoring
   labels:
-    app.kubernetes.io/name: etcd
+    k8s-app: etcd-k8s
 spec:
   jobLabel: k8s-app
   endpoints:
@@ -18,7 +18,7 @@ spec:
       insecureSkipVerify: true
   selector:
     matchLabels:
-      app.kubernetes.io/name: etcd
+      k8s-app: etcd
   namespaceSelector:
     matchNames:
     - kube-system

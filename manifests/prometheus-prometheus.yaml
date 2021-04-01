@@ -31,6 +31,8 @@ spec:
   probeNamespaceSelector: {}
   probeSelector: {}
   replicas: 2
+  secrets:
+  - etcd-certs
   resources:
     requests:
       memory: 400Mi
