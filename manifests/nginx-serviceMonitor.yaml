@@ -11,7 +11,6 @@ spec:
     port: metrics
   selector:
     matchLabels:
-      app.kubernetes.io/name: ingress-nginx
       release: prometheus-operator
   namespaceSelector:
     matchNames:
