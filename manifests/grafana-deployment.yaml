@@ -134,6 +134,9 @@ spec:
         - mountPath: /grafana-dashboard-definitions/0/kube-cluster-prometheus
           name: grafana-dashboard-kube-cluster
           readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/nginx
+          name: grafana-dashboard-nginx
+          readOnly: false
       nodeSelector:
         beta.kubernetes.io/os: linux
       securityContext:
@@ -225,3 +228,6 @@ spec:
       - configMap:
           name: grafana-dashboard-kube-cluster
         name: grafana-dashboard-kube-cluster
+      - configMap:
+          name: grafana-dashboard-nginx
+        name: grafana-dashboard-nginx
