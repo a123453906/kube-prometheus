@@ -10,8 +10,6 @@ spec:
   - interval: 30s
     port: metrics
   selector:
-    matchNames:
-    - ingress-nginx-controller
     matchLabels:
       app.kubernetes.io/name: ingress-nginx
   namespaceSelector:
