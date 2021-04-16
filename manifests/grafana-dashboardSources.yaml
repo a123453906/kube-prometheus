@@ -11,7 +11,8 @@ data:
                     "path": "/grafana-dashboard-definitions/0"
                 },
                 "orgId": 1,
-                "type": "file"
+                "type": "file",
+                "allowUiUpdates": true
             }
         ]
     }
