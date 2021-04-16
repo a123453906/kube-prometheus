@@ -39,9 +39,9 @@ spec:
           value: "http://grafana:3000/"
         - name: GF_RENDERING_RENDERING_MODE
           value: "clustered"
-        - name: GF_RENDERING_RENDERING_CLUSTERING_MODE
+        - name: GF_PLUGIN_GRAFANA_IMAGE_RENDERER_RENDERING_CLUSTERING_MODE
           value: "context"
-        - name: GF_RENDERING_RENDERING_CLUSTERING_MAX_CONCURRENCY
+        - name: GF_PLUGIN_GRAFANA_IMAGE_RENDERER_RENDERING_CLUSTERING_MAX_CONCURRENCY
           value: "100"
         - name: GF_LOG_FILTERS
           value: "rendering:debug"
