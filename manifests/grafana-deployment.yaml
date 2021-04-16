@@ -33,6 +33,32 @@ spec:
           value: "%(protocol)s://%(domain)s:%(http_port)s/api/v1/namespaces/monitoring/services/grafana:http/proxy/"
         - name: GF_SERVER_SERVE_FROM_SUB_PATH
           value: "true"
+        - name: GF_SMTP_ENABLED
+          value: "true"
+        - name: GF_SMTP_HOST
+          valueFrom:
+            secretKeyRef:
+              name: grafana-smtp-secret
+              key: host
+        - name: GF_SMTP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: grafana-smtp-secret
+              key: password
+        - name: GF_SMTP_SKIP_VERIFY
+          value: "true"
+        - name: GF_SMTP_FROM_ADDRESS
+          valueFrom:
+            secretKeyRef:
+              name: grafana-smtp-secret
+              key: from-address
+        - name: GF_SMTP_STARTTLS_POLICY
+          value: "MandatoryStartTLS"
+        - name: GF_SMTP_EHLO_IDENTITY
+          valueFrom:
+            secretKeyRef:
+              name: grafana-smtp-secret
+              key: ehlo-identity
         image: grafana/grafana:7.4.3
         name: grafana
         ports:

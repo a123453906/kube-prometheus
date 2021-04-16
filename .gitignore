@@ -4,3 +4,4 @@ vendor/
 ./auth
 .swp
 crdschemas/
+manifests/grafana-smtp-secret.yaml
