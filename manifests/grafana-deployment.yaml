@@ -67,6 +67,11 @@ spec:
             secretKeyRef:
               name: grafana-smtp-secret
               key: from-address
+        - name: GF_SMTP_USER
+          valueFrom:
+            secretKeyRef:
+              name: grafana-smtp-secret
+              key: from-address
         - name: GF_SMTP_STARTTLS_POLICY
           value: "MandatoryStartTLS"
         - name: GF_SMTP_EHLO_IDENTITY
